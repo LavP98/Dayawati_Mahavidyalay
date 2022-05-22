@@ -8,17 +8,17 @@ export class CarouselService {
     {
       id: 3,
       imgName: 'founder-phone',
-      imgUrl: '../../assets/carousel_pics/founder_phone.JPG',
+      imgUrl: 'assets/carousel_pics/founder_phone.JPG',
     },
     {
       id: 1,
       imgName: 'college-entrance',
-      imgUrl: '/assets/carousel_pics/main_college.jpeg',
+      imgUrl: 'assets/carousel_pics/main_college.jpeg',
     },
     {
       id: 2,
       imgName: 'classroom',
-      imgUrl: '../../assets/carousel_pics/classroom.jpeg',
+      imgUrl: 'assets/carousel_pics/classroom.jpeg',
     },
   ];
 

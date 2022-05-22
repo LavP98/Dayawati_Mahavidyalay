@@ -12,7 +12,7 @@ export class CarouselComponent implements OnInit {
   currentlyActiveImg: any = {
     id: 1,
     imgName: 'college-entrance',
-    imgUrl: '../../assets/carousel_pics/main_college.jpeg',
+    imgUrl: 'assets/carousel_pics/main_college.jpeg',
   };
 
   constructor(private carouselService: CarouselService) {}
