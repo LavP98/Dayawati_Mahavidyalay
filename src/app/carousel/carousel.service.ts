@@ -13,7 +13,7 @@ export class CarouselService {
     {
       id: 1,
       imgName: 'college-entrance',
-      imgUrl: '../../assets/carousel_pics/main_college.jpeg',
+      imgUrl: '/assets/carousel_pics/main_college.jpeg',
     },
     {
       id: 2,
