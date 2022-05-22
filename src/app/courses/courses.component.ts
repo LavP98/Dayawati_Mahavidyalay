@@ -22,12 +22,18 @@ export class CoursesComponent implements OnInit {
     switch (subject) {
       case 'BA':
         this.hideBa = !this.hideBa;
+        this.hideBsc = true;
+        this.hideBscAgriculture = true;
         break;
       case 'BSc':
         this.hideBsc = !this.hideBsc;
+        this.hideBa = true;
+        this.hideBscAgriculture = true;
         break;
       case 'BSc Agriculture':
         this.hideBscAgriculture = !this.hideBscAgriculture;
+        this.hideBa = true;
+        this.hideBsc = true;
         break;
     }
   }
