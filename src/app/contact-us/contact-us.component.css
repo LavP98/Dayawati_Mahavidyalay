@@ -45,7 +45,7 @@ ul {
 .container {
   width: 200px;
   height: 300px;
-  border: 2px solid #ff8900;
+  border: 2px solid rgb(38 76 122);
   width: 77% !important;
   display: flex;
   justify-content: space-evenly;
@@ -53,15 +53,17 @@ ul {
 }
 
 .box {
-  border: 2px solid #ff8900;
+  border: 2px solid rgb(38 76 122);
+  font-family: "Open Sans";
   width: 340px;
   height: 249px;
   margin: 25px 0px;
 }
 
 #course-header {
-  background-color: #ff8900 !important;
+  background-color: rgb(38 76 122) !important;
   font-weight: bold;
+  font-family: "Open Sans";
   color: white;
   width: 99%;
   margin-left: 3px;
@@ -81,4 +83,9 @@ address {
   width: 114%;
   margin-left: -45px;
   text-align: center;
+  font-family: "Open Sans";
+}
+
+li {
+  font-family: "Open Sans";
 }

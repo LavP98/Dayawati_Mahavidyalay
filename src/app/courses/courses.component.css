@@ -5,6 +5,7 @@
 li {
   width: 77%;
   text-align: center;
+  font-family: "Open Sans";
 }
 
 ul {
@@ -12,7 +13,8 @@ ul {
 }
 
 #course-header {
-  background-color: #ff8900 !important;
+  background-color: rgb(38 76 122) !important;
   font-weight: bold;
+  font-family: "Open Sans";
   color: white;
 }
