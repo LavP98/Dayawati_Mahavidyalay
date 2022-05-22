@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 4px 2px;
+}
+
+@media (max-width: 912px) {
+  .btn {
+    font-size: 12px;
+  }
+}

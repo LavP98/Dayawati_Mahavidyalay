@@ -37,6 +37,10 @@ ul {
   .copyright {
     margin-left: -93px !important;
   }
+
+  .top-btn {
+    font-size: 12px;
+  }
 }
 
 ul {
@@ -89,4 +93,9 @@ address {
 
 li {
   font-family: "Open Sans";
+}
+
+.scroll-top-btn {
+  text-align: center;
+  margin: 40px 0 0 0;
 }

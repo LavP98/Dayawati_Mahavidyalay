@@ -19,19 +19,15 @@ export class CoursesComponent implements OnInit {
   }
 
   toggleExpansionSubjectsPanel(subject: string) {
-    this.hideBa = true;
-    this.hideBsc = true;
-    this.hideBscAgriculture = true;
-
     switch (subject) {
       case 'BA':
-        this.hideBa = false;
+        this.hideBa = !this.hideBa;
         break;
       case 'BSc':
-        this.hideBsc = false;
+        this.hideBsc = !this.hideBsc;
         break;
       case 'BSc Agriculture':
-        this.hideBscAgriculture = false;
+        this.hideBscAgriculture = !this.hideBscAgriculture;
         break;
     }
   }

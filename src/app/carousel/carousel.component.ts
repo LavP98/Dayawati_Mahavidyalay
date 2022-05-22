@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CarouselService } from './carousel.service';
 import { CarouselModel } from './carouselModel';
 
@@ -14,6 +14,7 @@ export class CarouselComponent implements OnInit {
     imgName: 'college-entrance',
     imgUrl: 'assets/carousel_pics/main_college.jpeg',
   };
+  @Output() navBtnClicked = new EventEmitter();
 
   constructor(private carouselService: CarouselService) {}
 
@@ -41,5 +42,9 @@ export class CarouselComponent implements OnInit {
     this.currentlyActiveImg = this.carouselImages.find(
       (img) => img.id == updatedId
     );
+  }
+
+  navMenuItemClicked(menuItem: string) {
+    this.navBtnClicked.emit(menuItem);
   }
 }
