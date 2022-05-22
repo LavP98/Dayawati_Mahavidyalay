@@ -22,6 +22,7 @@ export class CarouselService {
     },
   ];
 
+  
   getCarouselImages() {
     return [...this.carouselImages];
   }
