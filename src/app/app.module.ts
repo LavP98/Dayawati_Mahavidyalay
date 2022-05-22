@@ -10,6 +10,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NavBarComponent } from './carousel/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CardsComponent,
     CoursesComponent,
     ContactUsComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

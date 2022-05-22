@@ -1,7 +1,7 @@
 <div class="affiliated">
   <p>Affiliated with DR.RAMMANOHAR LOHIA AVADH UNIVERSITY, AYODHYA, U.P.</p>
 </div>
-
+<app-nav-bar (navBtnClicked)="navMenuItemClicked($event)"></app-nav-bar>
 <div class="container">
   <button
     [disabled]="currentlyActiveImg.id == 1"
