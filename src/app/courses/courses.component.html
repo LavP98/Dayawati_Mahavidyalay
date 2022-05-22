@@ -10,22 +10,86 @@
   <li
     a
     href="#"
+    (click)="toggleExpansionSubjectsPanel('BA')"
     class="list-group-item list-group-item-action list-group-item-light"
   >
     BA
+    <div [class.collapse]="hideBa" class="ba" id="collapseExample">
+      <div class="card card-body">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-header">
+              Duration - {{ getCourseDetails("BA")?.duration }}
+            </div>
+            <div class="card card-body" style="padding-top: 0px">
+              <span class="card-text">
+                <ul class="list-group">
+                  <li
+                    *ngFor="let subject of getCourseDetails('BA')?.subjects"
+                    class="list-group-item"
+                  >
+                    {{ subject }}
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </li>
   <li
     a
     href="#"
+    (click)="toggleExpansionSubjectsPanel('BSc')"
     class="list-group-item list-group-item-action list-group-item-light"
   >
     BSc
+    <div [class.collapse]="hideBsc" class="bsc" id="collapseExample">
+      <div class="card card-body">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-header">
+              Duration - {{ getCourseDetails("BSc")?.duration }}
+            </div>
+            <div class="card card-body" style="padding-top: 0px">
+              <span class="card-text">
+                <ul class="list-group">
+                  <li
+                    *ngFor="let subject of getCourseDetails('BSc')?.subjects"
+                    class="list-group-item"
+                  >
+                    {{ subject }}
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </li>
   <li
     a
     href="#"
+    (click)="toggleExpansionSubjectsPanel('BSc Agriculture')"
     class="list-group-item list-group-item-action list-group-item-light"
   >
     BSc Agriculture
+    <div
+      [class.collapse]="hideBscAgriculture"
+      class="bsc_agriculture"
+      id="collapseExample"
+    >
+      <div class="card card-body">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-header">
+              Duration - {{ getCourseDetails("BSc Agriculture")?.duration }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>
