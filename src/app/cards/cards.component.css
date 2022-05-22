@@ -1,0 +1,40 @@
+.container {
+  justify-content: center !important;
+  margin-top: 35px;
+  width: 780px;
+}
+
+.card-header {
+  background-color: #ff8900 !important;
+  font-weight: bold;
+  color: white;
+}
+
+.card-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 10px 20px;
+}
+.card {
+  height: 190px;
+  border: 2px solid #ff8900;
+}
+
+cite {
+  text-align: right;
+  font-size: 10px;
+  margin-left: 90px;
+}
+@media (max-width: 912px) {
+  .container {
+    width: 250px;
+  }
+  .card {
+    margin: 10px 0px;
+    margin-left: -15px;
+    width: 250px;
+  }
+}

@@ -1,0 +1,84 @@
+ul {
+  width: 78%;
+  margin-left: 107px;
+}
+
+@media (max-width: 912px) {
+  ul {
+    margin-top: 45px !important;
+  }
+
+  .box {
+    border: 1px solid #818182;
+    width: 340px;
+    height: 195px !important;
+  }
+
+  .container {
+    height: 494px !important;
+  }
+
+  #course-header {
+    margin-left: -77px !important;
+  }
+
+  iframe {
+    width: 168px !important;
+    height: 192px !important;
+  }
+
+  address {
+    width: 100px !important;
+    font-size: 10px !important;
+    margin-top: 15px !important;
+    margin-left: 6px !important;
+  }
+
+  .copyright {
+    margin-left: -93px !important;
+  }
+}
+
+ul {
+  margin-top: 35px;
+}
+.container {
+  width: 200px;
+  height: 300px;
+  border: 2px solid #ff8900;
+  width: 77% !important;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 2px solid #ff8900;
+  width: 340px;
+  height: 249px;
+  margin: 25px 0px;
+}
+
+#course-header {
+  background-color: #ff8900 !important;
+  font-weight: bold;
+  color: white;
+  width: 99%;
+  margin-left: 3px;
+}
+
+iframe {
+  width: 336px;
+  height: 244px;
+}
+
+address {
+  margin-top: 30px;
+  margin-left: 12px;
+}
+
+.copyright {
+  width: 114%;
+  margin-left: -45px;
+  text-align: center;
+}

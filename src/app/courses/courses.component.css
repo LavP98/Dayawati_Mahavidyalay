@@ -1,0 +1,18 @@
+.list-group {
+  margin-top: 35px;
+}
+
+li {
+  width: 77%;
+  text-align: center;
+}
+
+ul {
+  align-items: center;
+}
+
+#course-header {
+  background-color: #ff8900 !important;
+  font-weight: bold;
+  color: white;
+}
