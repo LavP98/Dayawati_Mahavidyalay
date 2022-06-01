@@ -8,8 +8,12 @@
 h1 {
   font-weight: bold;
   font-family: "Open Sans";
-  color: rgb(38 76 122);
+  color: #ff3131;
   margin-bottom: 0px !important;
+}
+
+.date {
+  color: #ff3131;
 }
 
 p {
