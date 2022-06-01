@@ -11,6 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NavBarComponent } from './carousel/nav-bar/nav-bar.component';
+import { LandingPagePopupComponent } from './landing-page-popup/landing-page-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { QuickLinksComponent } from './quick-links/quick-links.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,8 @@ import { NavBarComponent } from './carousel/nav-bar/nav-bar.component';
     CoursesComponent,
     ContactUsComponent,
     NavBarComponent,
+    LandingPagePopupComponent,
+    QuickLinksComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +35,9 @@ import { NavBarComponent } from './carousel/nav-bar/nav-bar.component';
     NgbModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatDialogModule,
+    MatIconModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

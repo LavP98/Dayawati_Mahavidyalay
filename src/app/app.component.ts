@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { LandingPagePopupComponent } from './landing-page-popup/landing-page-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +11,15 @@ export class AppComponent implements OnInit {
   title = 'Dayawati';
 
   isViewMobile: boolean = false;
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.isViewMobile = this.detectMobile();
+    let dialogRef = this.dialog.open(LandingPagePopupComponent, {
+      width: '500px',
+      disableClose: true,
+    });
+    dialogRef.componentInstance.displayPopup = true;
   }
 
   navMenuItemClicked(menuItem: string) {
