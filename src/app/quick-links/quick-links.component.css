@@ -1,0 +1,43 @@
+#course-header {
+  background-color: rgb(38 76 122) !important;
+  font-weight: bold;
+  font-family: "Open Sans";
+  color: white;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+a {
+  color: #818182 !important;
+}
+
+.card-body {
+  font-family: "Open Sans";
+  /* padding-top: 0px !important; */
+}
+
+.list-group {
+  margin-top: 35px;
+}
+
+li {
+  width: 77%;
+  text-align: center;
+  font-family: "Open Sans";
+  list-style: none !important;
+  text-decoration: underline;
+}
+
+ul {
+  align-items: center;
+}
+
+@media (max-width: 912px) {
+  li {
+    width: 100%;
+    list-style: none !important;
+    /* font-size: 8px; */
+  }
+}
