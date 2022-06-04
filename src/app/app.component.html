@@ -1,4 +1,7 @@
-<div class="container">
+<app-scroll-top-btn
+  *ngIf="displayScrollBtn && isViewMobile"
+></app-scroll-top-btn>
+<div class="container" (scroll)="onScroll($event)">
   <app-logo></app-logo>
   <app-carousel
     [isViewMobile]="isViewMobile"
@@ -9,3 +12,5 @@
   <app-quick-links></app-quick-links>
   <app-contact-us></app-contact-us>
 </div>
+<!--
+*ngIf="displayScrollBtn" -->

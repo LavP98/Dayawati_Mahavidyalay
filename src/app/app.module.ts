@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { ScrollTopBtnComponent } from './scroll-top-btn/scroll-top-btn.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatMenuModule } from '@angular/material/menu';
     NavBarComponent,
     LandingPagePopupComponent,
     QuickLinksComponent,
+    ScrollTopBtnComponent,
   ],
   imports: [
     BrowserModule,
