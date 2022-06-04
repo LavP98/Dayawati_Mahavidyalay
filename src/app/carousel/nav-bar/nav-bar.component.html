@@ -1,29 +1,11 @@
 <div *ngIf="!isViewMobile" class="container">
-  <div class="btn">
+  <div class="btn" *ngFor="let item of navBarItems">
     <button
-      (click)="navClicked('courses', $event)"
+      (click)="navClicked(item.navItem, $event)"
       type="button"
       class="btn btn-outline-secondary"
     >
-      Courses
-    </button>
-  </div>
-  <div class="btn">
-    <button
-      (click)="navClicked('quick-links', $event)"
-      type="button"
-      class="btn btn-outline-secondary"
-    >
-      Quick Links
-    </button>
-  </div>
-  <div class="btn">
-    <button
-      (click)="navClicked('contact_us', $event)"
-      type="button"
-      class="btn btn-outline-secondary"
-    >
-      Contact Us
+      {{ item.name }}
     </button>
   </div>
 </div>
@@ -32,14 +14,10 @@
     Menu
   </button>
   <mat-menu #menu="matMenu" restoreFocus="false">
-    <button mat-menu-item (click)="navClicked('courses', $event)">
-      Courses
-    </button>
-    <button mat-menu-item (click)="navClicked('quick-links', $event)">
-      Quick Links
-    </button>
-    <button mat-menu-item (click)="navClicked('contact_us', $event)">
-      Contact Us
-    </button>
+    <span *ngFor="let item of navBarItems">
+      <button mat-menu-item (click)="navClicked(item.navItem, $event)">
+        {{ item.name }}
+      </button>
+    </span>
   </mat-menu>
 </div>

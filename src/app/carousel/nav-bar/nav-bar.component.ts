@@ -7,6 +7,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { NavbarModel } from './navbar.model';
+import { NavbarService } from './navbar.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -20,10 +22,13 @@ export class NavBarComponent implements OnInit {
   @Input() isViewMobile: boolean = false;
   @Output() navBtnClicked = new EventEmitter();
 
+  navBarItems: NavbarModel[] = [];
   showDropdown: boolean = false;
-  constructor() {}
+  constructor(private navbarService: NavbarService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.navBarItems = this.navbarService.getNavItems();
+  }
 
   navClicked(menuItem: string, event: any) {
     if (this.isViewMobile) {
