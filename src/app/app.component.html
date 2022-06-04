@@ -1,6 +1,9 @@
 <div class="container">
   <app-logo></app-logo>
-  <app-carousel (navBtnClicked)="navMenuItemClicked($event)"></app-carousel>
+  <app-carousel
+    [isViewMobile]="isViewMobile"
+    (navBtnClicked)="navMenuItemClicked($event)"
+  ></app-carousel>
   <app-cards></app-cards>
   <app-courses></app-courses>
   <app-quick-links></app-quick-links>

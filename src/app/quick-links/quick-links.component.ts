@@ -8,7 +8,7 @@ import { QuickLinksService } from './quick-links.service';
   styleUrls: ['./quick-links.component.css'],
 })
 export class QuickLinksComponent implements OnInit {
-   quickLinks: Quicklinks[] = [];
+  quickLinks: Quicklinks[] = [];
 
   constructor(private quickLinksService: QuickLinksService) {}
 

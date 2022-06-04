@@ -16,6 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { QuickLinksComponent } from './quick-links/quick-links.component';
     MatDialogModule,
     MatIconModule,
     MatInputModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -33,6 +33,13 @@ export class AppComponent implements OnInit {
         scroll(0, 900);
       }
     }
+    if (menuItem == 'quick-links') {
+      if (!this.isViewMobile) {
+        scroll(0, 1000);
+      } else {
+        scroll(0, 1300);
+      }
+    }
   }
 
   detectMobile() {
