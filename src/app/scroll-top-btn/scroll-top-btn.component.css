@@ -10,6 +10,7 @@ button {
 button {
   margin-top: 100% !important;
   bottom: 0 !important;
+  margin-bottom: 15px;
 }
 
 .btn {
