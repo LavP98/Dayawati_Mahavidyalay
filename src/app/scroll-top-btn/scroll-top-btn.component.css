@@ -1,0 +1,25 @@
+button {
+  position: fixed !important;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 13px;
+}
+button {
+  margin-top: 100% !important;
+  bottom: 0 !important;
+}
+
+.btn {
+  background-color: rgb(52, 100, 159) !important;
+  text-decoration: none;
+  color: white !important;
+}
+
+.btn:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+  color: black !important;
+}

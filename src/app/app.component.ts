@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LandingPagePopupComponent } from './landing-page-popup/landing-page-popup.component';
 
@@ -9,8 +9,19 @@ import { LandingPagePopupComponent } from './landing-page-popup/landing-page-pop
 })
 export class AppComponent implements OnInit {
   title = 'Dayawati';
-
   isViewMobile: boolean = false;
+  displayScrollBtn: boolean = false;
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      this.displayScrollBtn = true;
+    } else {
+      this.displayScrollBtn = false;
+    }
+  }
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
