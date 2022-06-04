@@ -28,6 +28,7 @@ li {
   font-family: "Open Sans";
   list-style: none !important;
   text-decoration: underline;
+  font-size: 15px !important;
 }
 
 ul {
