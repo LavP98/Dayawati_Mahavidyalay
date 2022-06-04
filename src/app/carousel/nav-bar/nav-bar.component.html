@@ -1,7 +1,7 @@
-<div class="container">
+<div *ngIf="!isViewMobile" class="container">
   <div class="btn">
     <button
-      (click)="navClicked('courses')"
+      (click)="navClicked('courses', $event)"
       type="button"
       class="btn btn-outline-secondary"
     >
@@ -10,11 +10,36 @@
   </div>
   <div class="btn">
     <button
-      (click)="navClicked('contact_us')"
+      (click)="navClicked('quick-links', $event)"
+      type="button"
+      class="btn btn-outline-secondary"
+    >
+      Quick Links
+    </button>
+  </div>
+  <div class="btn">
+    <button
+      (click)="navClicked('contact_us', $event)"
       type="button"
       class="btn btn-outline-secondary"
     >
       Contact Us
     </button>
   </div>
+</div>
+<div *ngIf="isViewMobile" class="container menu">
+  <button class="btn btn-outline-secondary" [matMenuTriggerFor]="menu">
+    Menu
+  </button>
+  <mat-menu #menu="matMenu" restoreFocus="false">
+    <button mat-menu-item (click)="navClicked('courses', $event)">
+      Courses
+    </button>
+    <button mat-menu-item (click)="navClicked('quick-links', $event)">
+      Quick Links
+    </button>
+    <button mat-menu-item (click)="navClicked('contact_us', $event)">
+      Contact Us
+    </button>
+  </mat-menu>
 </div>

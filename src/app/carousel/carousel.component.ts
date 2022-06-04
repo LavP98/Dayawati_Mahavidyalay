@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CarouselService } from './carousel.service';
 import { CarouselModel } from './carouselModel';
 
@@ -8,13 +8,15 @@ import { CarouselModel } from './carouselModel';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  @Input() isViewMobile: boolean = false;
+  @Output() navBtnClicked = new EventEmitter();
+
   carouselImages: CarouselModel[] = [];
   currentlyActiveImg: any = {
     id: 1,
     imgName: 'college-entrance',
     imgUrl: 'assets/carousel_pics/main_college.jpeg',
   };
-  @Output() navBtnClicked = new EventEmitter();
 
   constructor(private carouselService: CarouselService) {}
 

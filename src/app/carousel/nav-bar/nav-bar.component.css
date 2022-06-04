@@ -1,10 +1,30 @@
 .container {
   display: flex;
   justify-content: center;
+  font-family: "Open Sans" !important;
 }
 
 .btn {
-  margin: 4px 2px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: "Open Sans" !important;
+}
+
+.menu {
+  margin-bottom: 10px;
+}
+
+.menu .btn-outline-secondary {
+  color: rgb(38 76 122) !important;
+  border-color: rgb(38 76 122) !important;
+}
+
+.menu .btn:hover {
+  background-color: rgb(52, 100, 159) !important;
+  text-decoration: none;
+  color: white !important;
 }
 
 @media (max-width: 912px) {
