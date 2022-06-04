@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <li
+    a
+    href="#"
+    id="course-header"
+    class="list-group-item list-group-item-action list-group-item-warning no-underline"
+  >
+    QUICK LINKS
+  </li>
+  <li *ngFor="let obj of quickLinks">
+    <a
+      href="{{ obj.link }}"
+      class="list-group-item list-group-item-action"
+      aria-current="true"
+    >
+      {{ obj.name }}
+    </a>
+  </li>
+</ul>
