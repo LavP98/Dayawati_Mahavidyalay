@@ -12,6 +12,7 @@ export class CarouselComponent implements OnInit {
   @Input() isViewMobile: boolean = false;
   @Output() navBtnClicked = new EventEmitter();
 
+  navButtonPressed: boolean = false;
   carouselImages: CarouselModel[] = [];
   currentlyActiveImg: any = {
     id: 1,
@@ -29,17 +30,21 @@ export class CarouselComponent implements OnInit {
     this.landingPagePopupService.landingPagePopupClosed.subscribe((status) => {
       if (status == 'true') {
         setInterval(() => {
+          if (this.navButtonPressed) {
+            return;
+          }
           //Math.floor(Math.random() * (max - min + 1) + min)
           let random = Math.floor(
             Math.random() * (this.carouselImages.length - 1 - 0 + 1) + 0
           );
           this.forwardBtnPressed(random);
-        }, 2000);
+        }, 2200);
       }
     });
   }
 
   forwardBtnPressed(id: number) {
+    this.navButtonPressed = true;
     if (id == this.carouselImages.length) {
       return;
     }
@@ -51,6 +56,7 @@ export class CarouselComponent implements OnInit {
   //backBtnPressed forwardBtnPressed
 
   backBtnPressed(id: number) {
+    this.navButtonPressed = true;
     console.log(id, 'id');
     if (id == 0) {
       return;
