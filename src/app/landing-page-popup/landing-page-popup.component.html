@@ -11,25 +11,44 @@
   </button>
 </mat-dialog-actions>
 <div class="content" mat-dialog-content>
-  <p *ngIf="selectedLanguageEnglish">
-    All the students of BA 2nd Semester and BSc 2nd Semester of Dayawati
-    Mahavidyalaya are requested to fill their examination form and submit the
-    admission fee to the college without delay by
-    <b class="date">06/06/2022</b>.
-  </p>
-  <p class="content" *ngIf="!selectedLanguageEnglish">
-    दयावती महाविद्यालय के सभी बी ए द्वितीय सेमेस्टर एवम बी एस सी द्वितीय
-    सेमेस्टर के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म भरकर
-    , प्रवेश शुल्क के साथ महाविद्यालय में <b class="date">06/06/2022</b> तक
-    अविलम्ब जमा करे।
-  </p>
+  <span *ngIf="selectedLanguageEnglish">
+    <p>
+      All the students of BA 2nd Semester and BSc 2nd Semester of Dayawati
+      Mahavidyalaya are requested to fill their examination form and submit the
+      admission fee to the college without delay by
+      <b class="date">06/06/2022</b>.
+    </p>
+    <hr />
+    <p>
+      All BS-C Agriculture II, IV, and VI semester students of Dayavati College
+      are informed to fill up their examination form and submit them along with
+      admission fee to the college without delay by
+      <b class="date">12/06/2022.</b>.
+    </p>
+  </span>
+  <span *ngIf="!selectedLanguageEnglish">
+    <p class="content">
+      दयावती महाविद्यालय के सभी बी ए द्वितीय सेमेस्टर एवम बी एस सी द्वितीय
+      सेमेस्टर के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म
+      भरकर , प्रवेश शुल्क के साथ महाविद्यालय में
+      <b class="date">06/06/2022</b> तक अविलम्ब जमा करे।
+    </p>
+    <hr />
+    <p class="content">
+      दयावती महाविद्यालय के सभी बी एस-सी कृषि द्वितीय,चतुर्थ, एवं छठे सेमेस्टर
+      के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म भरकर ,
+      प्रवेश शुल्क के साथ महाविद्यालय में <b class="date">12/06/2022 </b> तक
+      अविलम्ब जमा करे।
+    </p>
+  </span>
 </div>
 <mat-dialog-actions align="end">
   <button
     mat-button
-    mat-dialog-close
+    [mat-dialog-close]="'closed'"
     type="button"
     class="btn btn-outline-secondary btn-sm"
+    (click)="onLandingPagePopupClose()"
   >
     {{ !selectedLanguageEnglish ? "X" : "Close" }}
   </button>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LandingPagePopupService } from '../landing-page-popup/landing-page-popup.service';
 import { CarouselService } from './carousel.service';
 import { CarouselModel } from './carouselModel';
 
@@ -18,10 +19,25 @@ export class CarouselComponent implements OnInit {
     imgUrl: 'assets/carousel_pics/main_college.jpeg',
   };
 
-  constructor(private carouselService: CarouselService) {}
+  constructor(
+    private carouselService: CarouselService,
+    private landingPagePopupService: LandingPagePopupService
+  ) {}
 
   ngOnInit(): void {
     this.carouselImages = this.carouselService.getCarouselImages();
+    this.landingPagePopupService.landingPagePopupClosed.subscribe((status) => {
+      if (status == 'true') {
+        // let i = 0;
+        // setInterval(() => {
+        //   //Math.floor(Math.random() * (max - min + 1) + min)
+        //   let random = Math.floor(
+        //     Math.random() * (this.carouselImages.length - 1 - 0 + 1) + 0
+        //   );
+        //   this.forwardBtnPressed(random);
+        // }, 1500);
+      }
+    });
   }
 
   forwardBtnPressed(id: number) {
@@ -32,11 +48,11 @@ export class CarouselComponent implements OnInit {
     this.currentlyActiveImg = this.carouselImages.find(
       (img) => img.id == updatedId
     );
-    console.log(this.currentlyActiveImg);
   }
   //backBtnPressed forwardBtnPressed
 
   backBtnPressed(id: number) {
+    console.log(id, 'id');
     if (id == 0) {
       return;
     }
