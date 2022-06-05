@@ -37,7 +37,10 @@ export class CarouselComponent implements OnInit {
           let random = Math.floor(
             Math.random() * (this.carouselImages.length - 1 - 0 + 1) + 0
           );
-          this.forwardBtnPressed(random);
+          let updatedId = random + 1;
+          this.currentlyActiveImg = this.carouselImages.find(
+            (img) => img.id == updatedId
+          );
         }, 2200);
       }
     });
