@@ -28,14 +28,13 @@ export class CarouselComponent implements OnInit {
     this.carouselImages = this.carouselService.getCarouselImages();
     this.landingPagePopupService.landingPagePopupClosed.subscribe((status) => {
       if (status == 'true') {
-        // let i = 0;
-        // setInterval(() => {
-        //   //Math.floor(Math.random() * (max - min + 1) + min)
-        //   let random = Math.floor(
-        //     Math.random() * (this.carouselImages.length - 1 - 0 + 1) + 0
-        //   );
-        //   this.forwardBtnPressed(random);
-        // }, 1500);
+        setInterval(() => {
+          //Math.floor(Math.random() * (max - min + 1) + min)
+          let random = Math.floor(
+            Math.random() * (this.carouselImages.length - 1 - 0 + 1) + 0
+          );
+          this.forwardBtnPressed(random);
+        }, 2000);
       }
     });
   }
