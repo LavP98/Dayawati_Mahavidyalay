@@ -56,3 +56,17 @@ p {
     height: 300px !important;
   }
 }
+
+.flash {
+   animation-name: flash;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: #ff3131;}
+    to {color: rgb(52, 100, 159);}
+}
