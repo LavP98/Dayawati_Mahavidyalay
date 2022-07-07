@@ -1,4 +1,7 @@
-<h1 mat-dialog-title>{{ !selectedLanguageEnglish ? " सूचना" : "Notice" }}</h1>
+<!-- <h1 mat-dialog-title>{{ !selectedLanguageEnglish ? " सूचना" : "Notice" }}</h1> -->
+<h1 mat-dialog-title class="flash">
+  {{ !selectedLanguageEnglish ? "अंतिम अनुस्मारक ⚠" : "Final Reminder ⚠" }}
+</h1>
 <mat-dialog-actions align="end">
   <button
     (click)="changeLanguage()"
@@ -12,32 +15,32 @@
 </mat-dialog-actions>
 <div class="content" mat-dialog-content>
   <span *ngIf="selectedLanguageEnglish">
-    <p>
+    <!-- <p>
       All the students of BA 2nd Semester and BSc 2nd Semester of Dayawati
       Mahavidyalaya are requested to fill their examination form and submit the
       admission fee to the college without delay by
       <b class="date">22/06/2022</b>.
-    </p>
-    <hr />
+    </p> -->
+    <!-- <hr /> -->
     <p>
       All BSc Agriculture II, IV, and VI semester students of Dayavati College
       are informed to fill up their examination form and submit them along with
       admission fee to the college without delay by
-      <b class="date">24/06/2022</b>.
+      <b class="date flash">12/07/2022</b>.
     </p>
   </span>
   <span *ngIf="!selectedLanguageEnglish">
-    <p class="content">
+    <!-- <p class="content">
       दयावती महाविद्यालय के सभी बी ए द्वितीय सेमेस्टर एवम बी एस सी द्वितीय
       सेमेस्टर के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म
       भरकर , प्रवेश शुल्क के साथ महाविद्यालय में
       <b class="date">22/06/2022</b> तक अविलम्ब जमा करे।
-    </p>
-    <hr />
+    </p> -->
+    <!-- <hr /> -->
     <p class="content">
       दयावती महाविद्यालय के सभी बी एस-सी कृषि द्वितीय,चतुर्थ, एवं छठे सेमेस्टर
       के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म भरकर ,
-      प्रवेश शुल्क के साथ महाविद्यालय में <b class="date">24/06/2022 </b> तक
+      प्रवेश शुल्क के साथ महाविद्यालय में <b class="date flash">12/07/2022 </b> तक
       अविलम्ब जमा करे।
     </p>
   </span>
