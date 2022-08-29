@@ -1,7 +1,7 @@
-<!-- <h1 mat-dialog-title>{{ !selectedLanguageEnglish ? " सूचना" : "Notice" }}</h1> -->
-<h1 mat-dialog-title class="flash">
+<h1 mat-dialog-title>{{ !selectedLanguageEnglish ? " सूचना" : "Notice" }}</h1>
+<!-- <h1 mat-dialog-title class="flash">
   {{ !selectedLanguageEnglish ? "अंतिम अनुस्मारक ⚠" : "Final Reminder ⚠" }}
-</h1>
+</h1> -->
 <mat-dialog-actions align="end">
   <button
     (click)="changeLanguage()"
@@ -15,6 +15,14 @@
 </mat-dialog-actions>
 <div class="content" mat-dialog-content>
   <span *ngIf="selectedLanguageEnglish">
+    <p style="text-align: center;">
+      According to <span class="flash"> NEW EDUCATION POLICY 2020</span>,
+      anyone can take admission in any courses. <br /><br>
+      For example: Arts student can take admission in Science Agriculture,
+      Commerce student can take admission in agriculture and Science student can
+      take admission in Commerce. <br>
+    </p>
+    
     <!-- <p>
       All the students of BA 2nd Semester and BSc 2nd Semester of Dayawati
       Mahavidyalaya are requested to fill their examination form and submit the
@@ -22,14 +30,22 @@
       <b class="date">22/06/2022</b>.
     </p> -->
     <!-- <hr /> -->
-    <p>
+    <!-- <p>
       All BSc Agriculture II, IV, and VI semester students of Dayavati College
       are informed to fill up their examination form and submit them along with
       admission fee to the college without delay by
       <b class="date flash">12/07/2022</b>.
-    </p>
+    </p> -->
   </span>
   <span *ngIf="!selectedLanguageEnglish">
+<p style="text-align: center;">
+   <span class="flash">नई शिक्षा नीति 2020 के अनुसार</span>,
+      कोई भी किसी भी कोर्स में प्रवेश ले सकता है। <br> <br>
+      उदाहरण के लिए: कला के छात्र विज्ञान कृषि में प्रवेश ले सकते हैं,
+      वाणिज्य के छात्र कृषि में प्रवेश ले सकते हैं और विज्ञान के छात्र कर सकते हैं
+      कॉमर्स में एडमिशन लें।
+</p>
+  
     <!-- <p class="content">
       दयावती महाविद्यालय के सभी बी ए द्वितीय सेमेस्टर एवम बी एस सी द्वितीय
       सेमेस्टर के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म
@@ -37,12 +53,12 @@
       <b class="date">22/06/2022</b> तक अविलम्ब जमा करे।
     </p> -->
     <!-- <hr /> -->
-    <p class="content">
+    <!-- <p class="content">
       दयावती महाविद्यालय के सभी बी एस-सी कृषि द्वितीय,चतुर्थ, एवं छठे सेमेस्टर
       के छात्र छात्राओं को सूचित किया जाता है कि अपना परीक्षा फार्म भरकर ,
       प्रवेश शुल्क के साथ महाविद्यालय में <b class="date flash">12/07/2022 </b> तक
       अविलम्ब जमा करे।
-    </p>
+    </p> -->
   </span>
 </div>
 <mat-dialog-actions align="end">
