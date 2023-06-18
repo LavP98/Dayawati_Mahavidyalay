@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { ScrollTopBtnComponent } from './scroll-top-btn/scroll-top-btn.component';
+import { AdmissionPagePopupComponent } from './landing-page-popup/admission-page-popup/admission-page-popup.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ScrollTopBtnComponent } from './scroll-top-btn/scroll-top-btn.component
     LandingPagePopupComponent,
     QuickLinksComponent,
     ScrollTopBtnComponent,
+    AdmissionPagePopupComponent,
   ],
   imports: [
     BrowserModule,

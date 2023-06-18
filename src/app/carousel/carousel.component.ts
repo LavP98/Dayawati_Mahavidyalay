@@ -27,8 +27,8 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.carouselImages = this.carouselService.getCarouselImages();
-    this.landingPagePopupService.landingPagePopupClosed.subscribe((status) => {
-      if (status == 'true') {
+    this.landingPagePopupService.autoScrollCarousel.subscribe((status) => {
+      if (status == true) {
         setInterval(() => {
           if (this.navButtonPressed) {
             return;

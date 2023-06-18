@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{ !selectedLanguageEnglish ? " सूचना" : "Notice" }}</h1>
+<mat-dialog-actions align="end">
+  <button
+    (click)="changeLanguage()"
+    style="margin-top: -54px !important"
+    mat-button
+    type="button"
+    class="btn btn-outline-secondary btn-sm"
+  >
+    {{ selectedLanguageEnglish ? "हिन्दी" : "English" }}
+  </button>
+</mat-dialog-actions>
+<div class="content" mat-dialog-content>
+  <span *ngIf="selectedLanguageEnglish">
+    <h4 class="flash center-text box limited-offer-header">
+      Limited Seats Available
+    </h4>
+    <div class="blink">
+      <p class="content center-text admission-content">
+        Admission open on limited seats BA _ Hindi, English, Sanskrit,
+        Geography, Home Science, Sociology, Education B.Sc _ Physics, Chemistry,
+        Zoology, Botany, Mathematics B.Sc- Agriculture Course
+      </p>
+    </div>
+  </span>
+  <span *ngIf="!selectedLanguageEnglish">
+    <h5 class="flash center-text box limited-offer-header">
+      सीमित सीटें उपलब्ध
+    </h5>
+    <div class="blink">
+      <p class="content center-text admission-content">
+        प्रवेश प्रारंभ सीमित सीटो पर बी ए _हिंदी,अंग्रेजी, संस्कृत,भूगोल,गृह
+        विज्ञान, समाजशास्त्र, शिक्षा शास्त्र बी एस सी _ भौतिक विज्ञान, रसायन
+        विज्ञान, जन्तु विज्ञान, वनस्पति विज्ञान, गणित बी एस सी- कृषि पाठ्यक्रम
+      </p>
+    </div>
+  </span>
+</div>
+<mat-dialog-actions align="end">
+  <button
+    mat-button
+    [mat-dialog-close]="'closed'"
+    type="button"
+    class="btn btn-outline-secondary btn-sm"
+    (click)="onLandingPagePopupClose()"
+  >
+    {{ !selectedLanguageEnglish ? "X" : "Close" }}
+  </button>
+</mat-dialog-actions>

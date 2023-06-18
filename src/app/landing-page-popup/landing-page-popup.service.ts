@@ -5,10 +5,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class LandingPagePopupService {
-  landingPagePopupClosed = new BehaviorSubject<any>(false);
+  autoScrollCarousel = new BehaviorSubject<any>(false);
   constructor() {}
 
-  landingPagePopupBS() {
-    this.landingPagePopupClosed.next('true');
+  autoScrollCarouselBS(autoScrollCarousel: boolean) {
+    this.autoScrollCarousel.next(autoScrollCarousel);
   }
 }
