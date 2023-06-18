@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LandingPagePopupComponent } from './landing-page-popup/landing-page-popup.component';
+import { AdmissionPagePopupComponent } from './landing-page-popup/admission-page-popup/admission-page-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -26,11 +27,18 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.isViewMobile = this.detectMobile();
-    let dialogRef = this.dialog.open(LandingPagePopupComponent, {
+    let dialogRef = this.dialog.open(AdmissionPagePopupComponent, {
       width: '500px',
       disableClose: true,
     });
-    dialogRef.componentInstance.displayPopup = true;
+    setTimeout(() => {
+      dialogRef.afterClosed().subscribe(() => {
+        this.dialog.open(LandingPagePopupComponent, {
+          width: '500px',
+          disableClose: true,
+        });
+      });
+    }, 3000);
   }
 
   navMenuItemClicked(menuItem: string) {

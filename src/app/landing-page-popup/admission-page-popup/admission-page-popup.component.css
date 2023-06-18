@@ -1,0 +1,104 @@
+.display {
+  display: block;
+}
+::ng-deep mat-dialog-container {
+  border: 2px solid rgb(38 76 122) !important;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: "Open Sans";
+  color: #ff3131;
+  margin-bottom: 0px !important;
+}
+
+.date {
+  color: #ff3131;
+}
+
+p {
+  padding: 25px;
+  border: 1px solid rgb(38 76 122);
+}
+
+.btn-outline-secondary {
+  color: rgb(38 76 122) !important;
+  border-color: rgb(38 76 122) !important;
+}
+
+.content {
+  font-family: "Open Sans";
+}
+
+.btn-outline-secondary {
+  font-family: "Open Sans";
+}
+
+/* .btn-outline-secondary:focus,
+.btn-outline-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgb(38 76 122) !important;
+} */
+
+.btn:focus,
+.btn.focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  background-color: rgb(52, 100, 159) !important;
+  text-decoration: none;
+  color: white !important;
+}
+
+@media (max-width: 912px) {
+  #cdk-overlay-0 {
+    height: 300px !important;
+  }
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {
+    color: #ff3131;
+  }
+  to {
+    color: rgb(52, 100, 159);
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.blink {
+  background-color: rgb(38 76 122);
+  padding: 15px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.admission-content {
+  color: white;
+  animation: blink 0.8s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
