@@ -24,13 +24,30 @@ ul {
   color: white;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.align-right {
+  float: right;
+}
+
 @media (max-width: 912px) {
   li {
     width: 100%;
     /* font-size: 8px; */
   }
 
+  ul {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
   #collapseExample {
     font-size: 13px;
+  }
+
+  .card .card-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }

@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LandingPagePopupComponent } from './landing-page-popup/landing-page-popup.component';
 import { AdmissionPagePopupComponent } from './landing-page-popup/admission-page-popup/admission-page-popup.component';
+import { PamphletPopupComponent } from './landing-page-popup/pamphlet-popup/pamphlet-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -31,14 +32,21 @@ export class AppComponent implements OnInit {
       width: '500px',
       disableClose: true,
     });
-    setTimeout(() => {
-      dialogRef.afterClosed().subscribe(() => {
-        this.dialog.open(LandingPagePopupComponent, {
-          width: '500px',
-          disableClose: true,
-        });
+
+    // dialogRef.afterClosed().subscribe(() => {
+    //   this.dialog.open(LandingPagePopupComponent, {
+    //     width: '500px',
+    //     disableClose: true,
+    //   });
+    // });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.dialog.open(PamphletPopupComponent, {
+        width: '500px',
+        height: '800px',
+        disableClose: true,
       });
-    }, 3000);
+    });
   }
 
   navMenuItemClicked(menuItem: string) {
