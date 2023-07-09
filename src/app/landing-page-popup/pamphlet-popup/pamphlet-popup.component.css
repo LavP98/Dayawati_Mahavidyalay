@@ -41,6 +41,15 @@ p {
   box-shadow: 0 0 0 0.2rem rgb(38 76 122) !important;
 } */
 
+.parent-container {
+  display: flex;
+}
+
+.child-contaimer {
+  justify-content: center;
+  align-items: center;
+}
+
 .btn:focus,
 .btn.focus {
   outline: 0;
