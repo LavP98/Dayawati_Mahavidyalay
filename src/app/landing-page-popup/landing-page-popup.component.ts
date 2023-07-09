@@ -18,6 +18,6 @@ export class LandingPagePopupComponent implements OnInit {
   }
 
   onLandingPagePopupClose() {
-    this.landingPagePopupService.autoScrollCarouselBS(true);
+    this.landingPagePopupService.autoScrollCarouselBS(false);
   }
 }

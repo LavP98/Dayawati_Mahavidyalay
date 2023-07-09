@@ -1,0 +1,16 @@
+<div mat-dialog-content>
+  <div>
+    <img [src]="pamphletUrl" alt="" />
+  </div>
+</div>
+<mat-dialog-actions align="end">
+  <button
+    mat-button
+    [mat-dialog-close]="'closed'"
+    type="button"
+    class="btn btn-outline-secondary btn-sm"
+    (click)="onLandingPagePopupClose()"
+  >
+    {{ !selectedLanguageEnglish ? "X" : "Close" }}
+  </button>
+</mat-dialog-actions>

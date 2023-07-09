@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from './courses.service';
+import { CourseNameEnum } from './enums/course-name.enums';
 
 @Component({
   selector: 'app-courses',
@@ -12,6 +13,7 @@ export class CoursesComponent implements OnInit {
   hideBscAgriculture: boolean = true;
   courseDetails: any;
   showExpansion: boolean = false;
+  courses = CourseNameEnum;
   constructor(private coursesService: CoursesService) {}
 
   ngOnInit(): void {
